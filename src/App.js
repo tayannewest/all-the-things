@@ -5,6 +5,7 @@ import ManliestThings from './pages/ManliestThings/ManliestThings'
 import FunctionalThings from './pages/FunctionalThings/FunctionalThings'
 import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
+import SpookyThings from './pages/SpookyThings/SpookyThings'
 import Landing from './pages/Landing/Landing'
 
 const App = () => {
@@ -129,6 +130,15 @@ const App = () => {
     },
   ])
 
+
+  const [taysThings, setTaysThings] = useState([
+    {
+      name: "tarantulas",
+      image: "https://upload.wikimedia.org/wikipedia/commons/7/72/Nhandu-chromatus-female.jpg",  
+      attributes: ["creepy", "crawly", "crunchy", "cutie"],
+    },
+  ])
+
   return (
     <Routes>
       {/* All the <Route> components should live here */}
@@ -148,6 +158,10 @@ const App = () => {
       <Route
         path="/the-silly-things"
         element={<SillyThings things={huntersThings} />}
+      />
+      <Route
+        path="/the-spooky-things"
+        element={<SpookyThings things={taysThings} />}
       />
     </Routes>
   )
